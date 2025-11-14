@@ -13,8 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
   --black: #242424
   --white: #FFFFFF
-  --primary: var(--black);
-  --secondary: var(--white);
+  --primary: var(--white);
+  --secondary: var(--black);
 }
 
 a {
@@ -97,4 +97,12 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.whitemode {
+  --primary:var(--white)
+}
+
+.darkmode {
+  --primary:var(var(--black))
 }
