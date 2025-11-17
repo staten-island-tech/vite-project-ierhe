@@ -12,7 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --black: #242424
-  --white: #FFFFFF
+  --white: #ffffff
   --primary: var(--white);
   --secondary: var(--black);
 }
@@ -104,5 +104,5 @@ button:focus-visible {
 }
 
 .darkmode {
-  --primary:var(var(--black))
+  --primary:var(--black)
 }
