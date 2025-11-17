@@ -11,8 +11,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --black: #242424
-  --white: #ffffff
+  --black: #242424;
+  --white: #ffffff;
   --primary: var(--white);
   --secondary: var(--black);
 }
@@ -100,9 +100,10 @@ button:focus-visible {
 }
 
 .whitemode {
-  --primary:var(--white)
+  --primary:var(--white);
+  
 }
 
 .darkmode {
-  --primary:var(--black)
+  --primary:var(--black);
 }
