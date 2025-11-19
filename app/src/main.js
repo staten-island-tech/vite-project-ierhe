@@ -13,31 +13,43 @@ songlist [
   {
   name: "placeholder",
   category: "placeholder",
-  img: ,
-  alt: ,
+  img: "placeholder",
+  alt: "placeholder",
   },
   {
   name: "placeholder",
   category: "placeholder",
-  img: ,
-  alt: ,
+  img: "placeholder",
+  alt: "placeholder",
   },
   {
   name: "placeholder",
   category: "placeholder",
-  img: ,
-  alt: ,
+  img: "placeholder",
+  alt: "placeholder",
   },
   {
   name: "placeholder",
   category: "placeholder",
-  img: ,
-  alt: ,
+  img: "placeholder",
+  alt: "placeholder",
   },
   {
   name: "placeholder",
   category: "placeholder",
-  img: ,
-  alt: ,
+  img: "placeholder",
+  alt: "placeholder",
   }
 ]
+
+function inject(music){
+    const container = document.querySelector(".container")
+    container.insertAdjacentHTML("beforeend",
+        `<div class="card">
+        <img class="img" src="${music.img}"/>
+            <div class="Category">
+                <h1>${music.category}</h1>
+            </div>
+        </div>`
+    );
+}
