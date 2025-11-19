@@ -52,6 +52,15 @@ body {
     align-items: center;
 }
 
+.container {
+    width: 90vw;
+    background-color: var(--primary);
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
