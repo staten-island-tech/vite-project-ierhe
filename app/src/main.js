@@ -33,12 +33,6 @@ songlist [
   category: "placeholder",
   img: "placeholder",
   alt: "placeholder",
-  },
-  {
-  name: "placeholder",
-  category: "placeholder",
-  img: "placeholder",
-  alt: "placeholder",
   }
 ]
 
