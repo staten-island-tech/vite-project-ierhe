@@ -53,3 +53,5 @@ function inject(music){
         </div>`
     );
 }
+
+songlist.forEach(inject);
