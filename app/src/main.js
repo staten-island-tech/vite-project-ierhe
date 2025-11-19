@@ -10,7 +10,34 @@ document.querySelector(".btn").addEventListener("click", function () {
 });
 
 songlist [
-  
+  {
+  name: "placeholder",
+  category: "placeholder",
+  img: ,
+  alt: ,
+  },
+  {
+  name: "placeholder",
+  category: "placeholder",
+  img: ,
+  alt: ,
+  },
+  {
+  name: "placeholder",
+  category: "placeholder",
+  img: ,
+  alt: ,
+  },
+  {
+  name: "placeholder",
+  category: "placeholder",
+  img: ,
+  alt: ,
+  },
+  {
+  name: "placeholder",
+  category: "placeholder",
+  img: ,
+  alt: ,
+  }
 ]
-
-vx
