@@ -58,8 +58,8 @@ const Pop = document.getElementById("PopButton");
 const Rock = document.getElementById("RockButton");
 const Romance = document.getElementById("RomanceButton");
 
-FunkButton.addEventListener("click", function() {
-    container.innerHTML = "";
-    const Funk = songlist.filter(songlist => tapir.category === "Funk");
+Funk.addEventListener("click", function() {
+  container.innerHTML = "";
+  const Funk = songlist.filter(songlist => songlist.category === "Funk");
   Funk.forEach(songlist => inject(songlist));
 });
