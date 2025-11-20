@@ -9,7 +9,7 @@ document.querySelector(".btn").addEventListener("click", function () {
   }
 });
 
-songlist [
+const songlist = [
   {
   name: "placeholder",
   category: "placeholder",
