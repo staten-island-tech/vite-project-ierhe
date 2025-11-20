@@ -60,7 +60,6 @@ const Romance = document.getElementById("RomanceButton");
 
 FunkButton.addEventListener("click", function() {
     container.innerHTML = "";
-    const babyTapirs = tapirs.filter(tapir => tapir.category === "baby tapir");
-  babyTapirs.forEach(tapir => inject(tapir));
-  addToCart();
+    const Funk = songlist.filter(songlist => tapir.category === "Funk");
+  Funk.forEach(songlist => inject(songlist));
 });
