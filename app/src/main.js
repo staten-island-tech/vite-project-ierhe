@@ -63,3 +63,21 @@ Funk.addEventListener("click", function() {
   const Funk = songlist.filter(songlist => songlist.category === "Funk");
   Funk.forEach(songlist => inject(songlist));
 });
+
+Pop.addEventListener("click", function() {
+  container.innerHTML = "";
+  const Pop = songlist.filter(songlist => songlist.category === "Pop");
+  Pop.forEach(songlist => inject(songlist));
+});
+
+Rock.addEventListener("click", function() {
+  container.innerHTML = "";
+  const Rock = songlist.filter(songlist => songlist.category === "Rock");
+  Rock.forEach(songlist => inject(songlist));
+});
+
+Romance.addEventListener("click", function() {
+  container.innerHTML = "";
+  const Romance = songlist.filter(songlist => songlist.category === "Romance");
+  Romance.forEach(songlist => inject(songlist));
+});
