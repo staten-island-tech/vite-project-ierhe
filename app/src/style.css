@@ -52,6 +52,14 @@ body {
   align-items: center;
 }
 
+.Name {
+  display: flex;
+}
+
+.Category {
+  display: flex;
+}
+
 .container {
   width: 90vw;
   background-color: var(--primary);
