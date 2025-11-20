@@ -58,3 +58,9 @@ const Pop = document.getElementById("PopButton");
 const Rock = document.getElementById("RockButton");
 const Romance = document.getElementById("RomanceButton");
 
+FunkButton.addEventListener("click", function() {
+    container.innerHTML = "";
+    const babyTapirs = tapirs.filter(tapir => tapir.category === "baby tapir");
+  babyTapirs.forEach(tapir => inject(tapir));
+  addToCart();
+});
