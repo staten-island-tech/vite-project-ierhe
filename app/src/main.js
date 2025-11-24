@@ -60,24 +60,24 @@ function inject(music){
 
 Funk.addEventListener("click", function() {
   container.innerHTML = "";
-  const Funk = songlist.filter(songlist => songlist.category === "Funk");
-  Funk.forEach(songlist => inject(songlist));
+  const Funk = songlist.filter(song => song.category === "Funk");
+  Funk.forEach(song => inject(song));
 });
 
 Pop.addEventListener("click", function() {
   container.innerHTML = "";
-  const Pop = songlist.filter(songlist => songlist.category === "Pop");
-  Pop.forEach(songlist => inject(songlist));
+  const Pop = songlist.filter(song => song.category === "Pop");
+  Pop.forEach(song => inject(song));
 });
 
 Rock.addEventListener("click", function() {
   container.innerHTML = "";
-  const Rock = songlist.filter(songlist => songlist.category === "Rock");
-  Rock.forEach(songlist => inject(songlist));
+  const Rock = songlist.filter(song => song.category === "Rock");
+  Rock.forEach(song => inject(song));
 });
 
 Romance.addEventListener("click", function() {
   container.innerHTML = "";
-  const Romance = songlist.filter(songlist => songlist.category === "Romance");
-  Romance.forEach(songlist => inject(songlist));
+  const Romance = songlist.filter(song => song.category === "Romance");
+  Romance.forEach(song => inject(song));
 });
