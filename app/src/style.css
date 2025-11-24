@@ -73,6 +73,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: var(--secondary);
+}
+
+h2 {
+  color: var(--secondary);
 }
 
 #app {
@@ -133,9 +138,10 @@ button:focus-visible {
 
 .whitemode {
   --primary:var(--white);
-  
+  --secondary:var(--black);
 }
 
 .darkmode {
   --primary:var(--black);
+  --secondary:var(--white);
 }
