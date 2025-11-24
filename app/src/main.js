@@ -36,6 +36,13 @@ const songlist = [
   }
 ];
 
+songlist.forEach(inject);
+
+const Funk = document.getElementById("FunkButton");
+const Pop = document.getElementById("PopButton");
+const Rock = document.getElementById("RockButton");
+const Romance = document.getElementById("RomanceButton");
+
 function inject(music){
   const container = document.querySelector(".container")
   container.insertAdjacentHTML("beforeend",
@@ -50,13 +57,6 @@ function inject(music){
       </div>`
     );
 }
-
-songlist.forEach(inject);
-
-const Funk = document.getElementById("FunkButton");
-const Pop = document.getElementById("PopButton");
-const Rock = document.getElementById("RockButton");
-const Romance = document.getElementById("RomanceButton");
 
 Funk.addEventListener("click", function() {
   container.innerHTML = "";
