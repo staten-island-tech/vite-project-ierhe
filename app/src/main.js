@@ -86,5 +86,5 @@ Romance.addEventListener("click", function() {
 
 Reset.addEventListener("click", function() {
   container.innerHTML = "";
-  Reset.forEach(inject);
+  songlist.forEach(inject);
 });
