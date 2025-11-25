@@ -42,6 +42,7 @@ const Funk = document.getElementById("FunkButton");
 const Pop = document.getElementById("PopButton");
 const Rock = document.getElementById("RockButton");
 const Romance = document.getElementById("RomanceButton");
+const Reset = document.getElementById("ResetButton")
 const container = document.querySelector(".container");
 
 function inject(music){
@@ -81,4 +82,9 @@ Romance.addEventListener("click", function() {
   container.innerHTML = "";
   const Romance = songlist.filter(song => song.category === "Romance");
   Romance.forEach(song => inject(song));
+});
+
+Reset.addEventListener("click", function() {
+  container.innerHTML = "";
+  Reset.forEach(inject);
 });
