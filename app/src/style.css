@@ -145,6 +145,9 @@ button {
   background-color: var(--primary);
   cursor: pointer;
   transition: border-color 0.25s;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 button:hover {
   border-color: #646cff;
@@ -175,4 +178,8 @@ button:focus-visible {
 .darkmode {
   --primary:var(--black);
   --secondary:var(--white);
+}
+
+.title {
+  color: var(--secondary);
 }
