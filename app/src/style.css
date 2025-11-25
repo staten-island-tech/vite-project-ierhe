@@ -92,7 +92,7 @@ body {
 
 .topcard {
   width: 100%;
-  height: 200px;
+  height: 500px;
   display: flex;
   align-items: center;
   background-color: var(--primary);
