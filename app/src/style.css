@@ -53,6 +53,26 @@ body {
   align-items: center;
 }
 
+#form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box {
+  width: 22rem;
+  height: 2.5rem;
+  font-size: 2rem;
+}
+
 .Name {
   display: flex;
 }
