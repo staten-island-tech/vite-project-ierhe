@@ -60,6 +60,22 @@ function inject(music){
     );
 }
 
+function userinject(music){
+  const container = document.querySelector(".container")
+  container.insertAdjacentHTML("beforeend",
+    `<div class="card">
+      <img class="img" src="${music.img}"/>
+        <div class="Name">
+          <h1>${music.name}</h1>
+        </div>
+        <div class="Category">
+          <h1>${music.category}</h1>
+        </div>
+        <button class="remove btn">Remove Album</button>
+      </div>`
+    );
+}
+
 Funk.addEventListener("click", function() {
   container.innerHTML = "";
   const Funk = songlist.filter(song => song.category === "Funk");
@@ -95,9 +111,19 @@ document.getElementById("form").addEventListener("submit", function (e) {
   album.title = document.getElementById("title").value;
   album.url = document.getElementById("url").value;
   console.log(album, "TEST");
-  inject(album);
+  userinject(album);
   clearFields();
   document.querySelectorAll(".remove").forEach((button) => {
     button.addEventListener("click", removeAlbum);
   });
 });
+
+function removeAlbum(event) {
+  event.target.parentElement.remove();
+}
+
+function clearFields() {
+  DOMSelectors.title.value = "";
+  DOMSelectors.artist.value = "";
+  DOMSelectors.url.value = "";
+}
