@@ -60,16 +60,12 @@ function inject(music){
     );
 }
 
-function userinject(music){
-  const container = document.querySelector(".container")
-  container.insertAdjacentHTML("afterbegin",
+function userinject(album){
+  DOMSelectors.insertAdjacentHTML("afterbegin",
     `<div class="card">
-      <img class="img" src="${music.img}"/>
+      <img class="img" src="${album.img}"/>
         <div class="Name">
-          <h1>${music.name}</h1>
-        </div>
-        <div class="Category">
-          <h1>${music.category}</h1>
+          <h1>${album.name}</h1>
         </div>
         <button class="remove btn">Remove Album</button>
       </div>`
