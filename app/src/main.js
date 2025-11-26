@@ -62,7 +62,7 @@ function inject(music){
 
 function userinject(music){
   const container = document.querySelector(".container")
-  container.insertAdjacentHTML("beforeend",
+  container.insertAdjacentHTML("afterbegin",
     `<div class="card">
       <img class="img" src="${music.img}"/>
         <div class="Name">
