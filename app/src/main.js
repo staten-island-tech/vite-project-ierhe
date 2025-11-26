@@ -88,3 +88,16 @@ Reset.addEventListener("click", function() {
   container.innerHTML = "";
   songlist.forEach(inject);
 });
+
+document.getElementById("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  let album = {};
+  album.title = document.getElementById("title").value;
+  album.url = document.getElementById("url").value;
+  console.log(album, "TEST");
+  inject(album);
+  clearFields();
+  document.querySelectorAll(".remove").forEach((button) => {
+    button.addEventListener("click", removeAlbum);
+  });
+});
