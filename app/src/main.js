@@ -127,3 +127,9 @@ function clearFields() {
   DOMSelectors.artist.value = "";
   DOMSelectors.url.value = "";
 }
+
+const DOMSelectors = {
+  title: document.getElementById("title"),
+  url: document.getElementById("url"),
+  display: document.getElementById("display"),
+};
