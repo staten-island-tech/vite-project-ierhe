@@ -60,18 +60,6 @@ function inject(music){
     );
 }
 
-function userinject(album){
-  DOMSelectors.insertAdjacentHTML("afterbegin",
-    `<div class="card">
-      <img class="img" src="${album.img}"/>
-        <div class="Name">
-          <h1>${album.name}</h1>
-        </div>
-        <button class="remove btn">Remove Album</button>
-      </div>`
-    );
-}
-
 Funk.addEventListener("click", function() {
   container.innerHTML = "";
   const Funk = songlist.filter(song => song.category === "Funk");
@@ -129,3 +117,15 @@ const DOMSelectors = {
   url: document.getElementById("url"),
   display: document.getElementById("display"),
 };
+
+function userinject(album){
+  DOMSelectors.usercontainer.insertAdjacentHTML("afterbegin",
+    `<div class="card">
+      <img class="img" src="${album.img}"/>
+        <div class="Name">
+          <h1>${album.name}</h1>
+        </div>
+        <button class="remove btn">Remove Album</button>
+      </div>`
+    );
+}
