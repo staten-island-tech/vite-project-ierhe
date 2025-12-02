@@ -44,6 +44,7 @@ const Rock = document.getElementById("RockButton");
 const Romance = document.getElementById("RomanceButton");
 const Reset = document.getElementById("ResetButton")
 const container = document.querySelector(".container");
+const usercontainer = document.querySelector(".usercontainer");
 
 function inject(music){
   const container = document.querySelector(".container")
@@ -119,6 +120,7 @@ const DOMSelectors = {
 };
 
 function userinject(album){
+  const usercontainer = document.querySelector(".usercontainer");
   DOMSelectors.usercontainer.insertAdjacentHTML("afterbegin",
     `<div class="card">
       <img class="img" src="${album.img}"/>
