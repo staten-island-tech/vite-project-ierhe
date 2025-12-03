@@ -44,7 +44,12 @@ const Rock = document.getElementById("RockButton");
 const Romance = document.getElementById("RomanceButton");
 const Reset = document.getElementById("ResetButton")
 const container = document.querySelector(".container");
-const usercontainer = document.querySelector(".usercontainer");
+const usercontainer = document.querySelector(".usercontainer")
+
+const DOMSelectors = {
+  title: document.getElementById("title"),
+  url: document.getElementById("url"),
+};
 
 function inject(music){
   const container = document.querySelector(".container")
@@ -57,8 +62,22 @@ function inject(music){
         <div class="Category">
           <h1>${music.category}</h1>
         </div>
+        <button class="addtolist">Add to your album</button>
       </div>`
     );
+}
+
+function userinject(album){
+  const usercontainer = document.querySelector(".usercontainer")
+  DOMSelectors.usercontainer.insertAdjacentHTML("afterbegin",
+    `<div class="card">
+    <img class="img" src="${album.img}"/>
+      <div class="Name">
+        <h1>${album.name}</h1>
+      </div>
+      <button class="remove btn">Remove Album</button>
+      </div>`
+  );
 }
 
 Funk.addEventListener("click", function() {
@@ -113,21 +132,3 @@ function clearFields() {
   DOMSelectors.url.value = "";
 }
 
-const DOMSelectors = {
-  title: document.getElementById("title"),
-  url: document.getElementById("url"),
-  display: document.getElementById("display"),
-};
-
-function userinject(album){
-  const usercontainer = document.querySelector(".usercontainer");
-  DOMSelectors.usercontainer.insertAdjacentHTML("afterbegin",
-    `<div class="card">
-      <img class="img" src="${album.img}"/>
-        <div class="Name">
-          <h1>${album.name}</h1>
-        </div>
-        <button class="remove btn">Remove Album</button>
-      </div>`
-    );
-}
