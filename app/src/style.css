@@ -33,6 +33,7 @@ body,
   height: 50%;
 }
 
+
 body {
   background-color: var(--primary);
 }
@@ -185,8 +186,8 @@ button:focus-visible {
   --secondary:var(--white);
 }
 
-.title {
-  color: #213547;
+label {
+  color: var(--secondary);
 }
 .form-parent {
   display: flex;
