@@ -33,6 +33,10 @@ body,
   height: 50%;
 }
 
+.recon {
+  border-top-color: var(--secondary);
+  border-style: solid;
+}
 
 body {
   background-color: var(--primary);
@@ -57,6 +61,13 @@ body {
   align-items: center;
 }
 
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .form-input {
   display: flex;
   flex-direction: column;
@@ -65,7 +76,10 @@ body {
 }
 
 .form-inputs {
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-box {
@@ -132,6 +146,12 @@ h1 {
 h2 {
   color: var(--secondary);
   text-shadow: 0px 0px 0px rgb(0, 168, 190);
+}
+
+h3 {
+  color: var(--secondary);
+  font-size: 30px;
+  text-align: center;
 }
 
 #app {
