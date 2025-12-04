@@ -113,7 +113,6 @@ document.getElementById("form").addEventListener("submit", function (e) {
   let album = {};
   album.title = document.getElementById("title").value;
   album.url = document.getElementById("url").value;
-  console.log(album, "TEST");
   userinject(album);
   clearFields();
   document.querySelectorAll(".remove").forEach((button) => {
