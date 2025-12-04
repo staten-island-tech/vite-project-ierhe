@@ -70,9 +70,9 @@ function inject(music){
 function userinject(album){
   DOMSelectors.usercontainer.insertAdjacentHTML("afterbegin",
     `<div class="card">
-    <img class="img" src="${album.img}"/>
+    <img class="img" src="${album.url}"/>
       <div class="Name">
-        <h1>${album.name}</h1>
+        <h1>${album.title}</h1>
       </div>
       <button class="remove btn">Remove Album</button>
       </div>`
@@ -127,7 +127,6 @@ function removeAlbum(event) {
 
 function clearFields() {
   DOMSelectors.title.value = "";
-  DOMSelectors.artist.value = "";
   DOMSelectors.url.value = "";
 }
 
