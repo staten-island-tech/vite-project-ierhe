@@ -44,7 +44,7 @@ const Rock = document.getElementById("RockButton");
 const Romance = document.getElementById("RomanceButton");
 const Reset = document.getElementById("ResetButton")
 const container = document.querySelector(".container");
-const lusic = document.getElementByClassName("addtolist")
+/* const lusic = document.getElementByClassName("addtolist") */
 
 const DOMSelectors = {
   title: document.getElementById("title"),
@@ -80,7 +80,7 @@ function userinject(album){
   );
 }
 
-lusic.addEventListener("click", function () {
+/* lusic.addEventListener("click", function () {
   songlist.name = document.getElementById("Name").value;
   songlist.img = document.getElementById("img").value;
   userinject(songlist);
@@ -88,7 +88,7 @@ lusic.addEventListener("click", function () {
   document.querySelectorAll(".remove").forEach((button) => {
     button.addEventListener("click", removeAlbum);
   });
-});
+}); */
 
 Funk.addEventListener("click", function() {
   container.innerHTML = "";
