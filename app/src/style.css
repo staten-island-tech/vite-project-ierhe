@@ -17,10 +17,14 @@ body,
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --black: #242424;
+  --black: #000000;
   --white: #ffffff;
   --primary: var(--white);
   --secondary: var(--black);
+}
+
+.addtolist {
+  color: var(--secondary);
 }
 
 .allbuttons {
@@ -35,7 +39,7 @@ body,
 
 .recon {
   border-color: var(--secondary);
-  border-top: 1%;
+  border-top: 5%;
   border-style: solid;
 }
 
@@ -135,7 +139,8 @@ form {
   display: flex;
   align-items: center;
   background-color: var(--primary);
-  border-style: solid;
+  border-bottom-style: solid;
+  border-bottom: 5%;
   border-color: var(--secondary);
 }
 
@@ -170,7 +175,6 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--primary);
   cursor: pointer;
   transition: border-color 0.25s;
   display: flex;
@@ -194,7 +198,8 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: var(--primary);
+    box-shadow: 5px 5px 5px rgb(0, 168, 190);
   }
 }
 
