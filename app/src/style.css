@@ -61,9 +61,8 @@ body {
 
 #form {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 form {
