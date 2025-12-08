@@ -44,7 +44,7 @@ const Rock = document.getElementById("RockButton");
 const Romance = document.getElementById("RomanceButton");
 const Reset = document.getElementById("ResetButton")
 const container = document.querySelector(".container");
-/* const lusic = document.getElementByClassName("addtolist") */
+const lusic = container.querySelector(".addtolist");
 
 const DOMSelectors = {
   title: document.getElementById("title"),
@@ -80,15 +80,17 @@ function userinject(album){
   );
 }
 
-/* lusic.addEventListener("click", function () {
+lusic.addEventListener("click", function () {
+  const album = {
+    title: music.name
+  }
   songlist.name = document.getElementById("Name").value;
   songlist.img = document.getElementById("img").value;
-  userinject(songlist);
-  clearFields();
+  userinject(album);
   document.querySelectorAll(".remove").forEach((button) => {
     button.addEventListener("click", removeAlbum);
   });
-}); */
+});
 
 Funk.addEventListener("click", function() {
   container.innerHTML = "";
