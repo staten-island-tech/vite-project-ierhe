@@ -2,6 +2,7 @@ html,
 body,
 * {
   box-sizing: border-box;
+  font-style: var(--secondary);
 }
 
 :root {
@@ -191,6 +192,7 @@ button:focus-visible {
   button {
     background-color: var(--primary);
     box-shadow: 5px 5px 5px rgb(0, 168, 190);
+    text-decoration-color: var(--secondary);
   }
 }
 
@@ -215,5 +217,16 @@ label {
 }
 
 .btn {
-  color: var(--secondary);
+  background-color: var(--primary);
+  box-shadow: 5px 5px 5px rgb(0, 168, 190);
+}
+
+.img {
+  object-fit: cover;
+  width: 90%;
+  height: 50%;
+  padding: 1vw;
+  display: flex;
+  object-position: center;
+  border-radius: 10%;
 }
