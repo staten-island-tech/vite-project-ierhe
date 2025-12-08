@@ -64,7 +64,10 @@ function inject(music){
           <h1>${music.category}</h1>
         </div>
         <button class="addtolist">Add to your album</button>
-      </div>`
+      </div>
+      document.querySelectorAll(".addtolist").forEach((button) => {
+      button.addEventListener("click", userinject);
+      `
     );
 }
 
