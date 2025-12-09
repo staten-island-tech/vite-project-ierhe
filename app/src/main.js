@@ -69,7 +69,7 @@ function inject(music){
         <div class="Category">
           <h1>${music.category}</h1>
         </div>
-        <button class="addtolist">Add to your album</button>
+        <button class="addtolist btn">Add to your album</button>
       </div>`
     );
 }
