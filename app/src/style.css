@@ -16,10 +16,6 @@ body,
   --secondary: var(--black);
 }
 
-.addtolist {
-  color: var(--secondary);
-}
-
 .allbuttons {
   margin : 5%;
   background-color: var(--primary);
@@ -54,8 +50,10 @@ body {
 
 #form {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
 }
 
 form {
@@ -230,4 +228,9 @@ label {
   display: flex;
   object-position: center;
   border-radius: 10%;
+}
+
+.hero-form-input {
+  background-color: var(--primary);
+  box-shadow: 5px 5px 5px rgb(0, 168, 190);
 }
