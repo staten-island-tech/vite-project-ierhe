@@ -42,7 +42,7 @@ body {
 
 .card {
   width: 22%;
-  height: 525px;
+  height: 700px;
   background-color: var(--primary);
   margin: 20px auto;
   box-shadow: 5px 5px 5px rgb(0, 168, 190);
@@ -172,6 +172,7 @@ button {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  color: var(--secondary);
 }
 button:hover {
   border-color: #646cff;
@@ -181,7 +182,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: var(--secondary)) {
+@media (prefers-color-scheme: var(--primary)) {
   :root {
     color: var(--primary);
     background-color: #ffffff;
@@ -192,7 +193,7 @@ button:focus-visible {
   button {
     background-color: var(--primary);
     box-shadow: 5px 5px 5px rgb(0, 168, 190);
-    text-decoration-color: var(--secondary);
+    text-decoration-color: var(--primary);
   }
 }
 
@@ -224,7 +225,7 @@ label {
 .img {
   object-fit: cover;
   width: 90%;
-  height: 50%;
+  height: 30%;
   padding: 1vw;
   display: flex;
   object-position: center;
