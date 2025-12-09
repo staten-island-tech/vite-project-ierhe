@@ -11,26 +11,30 @@ document.querySelector(".btn").addEventListener("click", function () {
 
 const songlist = [
   {
-  name: "placeholder",
+  name: "HOW DOES IT FEEL?",
   category: "Pop",
-  img: "placeholder",
+  creator: "The Kid LAROI",
+  img: "https://images.genius.com/af8a4471062c706018d9bc0e735d4a1d.1000x1000x1.png",
   alt: "placeholder",
   },
   {
   name: "placeholder",
   category: "Rock",
+  creator: "",
   img: "placeholder",
   alt: "placeholder",
   },
   {
   name: "placeholder",
   category: "Funk",
+  creator: "",
   img: "placeholder",
   alt: "placeholder",
   },
   {
   name: "placeholder",
   category: "Romance",
+  creator: "",
   img: "placeholder",
   alt: "placeholder",
   }
@@ -44,7 +48,6 @@ const Rock = document.getElementById("RockButton");
 const Romance = document.getElementById("RomanceButton");
 const Reset = document.getElementById("ResetButton")
 const container = document.querySelector(".container");
-const lusic = container.querySelector(".addtolist");
 
 const DOMSelectors = {
   title: document.getElementById("title"),
@@ -59,6 +62,9 @@ function inject(music){
       <img class="img" src="${music.img}"/>
         <div class="Name">
           <h1>${music.name}</h1>
+        </div>
+        <div class="Name">
+          <h1>${music.creator}</h1>
         </div>
         <div class="Category">
           <h1>${music.category}</h1>
@@ -80,13 +86,29 @@ function userinject(album){
   );
 }
 
-lusic.addEventListener("click", function () {
-  const album = {
-    title: music.name
+container.addEventListener("click", function (e) {
+  if (e.target.classList.contains("addtolist")) {
+    const card = e.target.closest(".card");
+    const title = card.querySelector(".Name h1").textContent;
+    const img = card.querySelector(".img").src;
+    const album = {
+      title: title,
+      url: img
+    };
+    userinject(album);
+    document.querySelectorAll(".remove").forEach((button) => {
+      button.addEventListener("click", removeAlbum);
+    });
   }
-  songlist.name = document.getElementById("Name").value;
-  songlist.img = document.getElementById("img").value;
+});
+
+document.getElementById("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  let album = {};
+  album.title = document.getElementById("title").value;
+  album.url = document.getElementById("url").value;
   userinject(album);
+  clearFields();
   document.querySelectorAll(".remove").forEach((button) => {
     button.addEventListener("click", removeAlbum);
   });
@@ -119,18 +141,6 @@ Romance.addEventListener("click", function() {
 Reset.addEventListener("click", function() {
   container.innerHTML = "";
   songlist.forEach(inject);
-});
-
-document.getElementById("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  let album = {};
-  album.title = document.getElementById("title").value;
-  album.url = document.getElementById("url").value;
-  userinject(album);
-  clearFields();
-  document.querySelectorAll(".remove").forEach((button) => {
-    button.addEventListener("click", removeAlbum);
-  });
 });
 
 function removeAlbum(event) {
