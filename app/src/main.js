@@ -87,7 +87,7 @@ function userinject(album){
       </div>`
   );
   DOMSelectors.picturecontainer.insertAdjacentHTML("afterbegin",
-    `<img class="img" src="${album.totalpicture}"/>`
+    `<img class="totalimg" src="${album.totalpicture}"/>`
   );
 }
 
