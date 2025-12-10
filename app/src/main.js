@@ -159,3 +159,6 @@ function clearFields() {
   DOMSelectors.totalpicture.value = "";
 }
 
+function noalbumart() {
+  
+}
