@@ -26,6 +26,10 @@ body,
   height: 50%;
 }
 
+.totalpicture {
+  
+}
+
 .recon {
   border-color: var(--secondary);
   border-top: 5%;
