@@ -52,7 +52,9 @@ const container = document.querySelector(".container");
 const DOMSelectors = {
   title: document.getElementById("title"),
   url: document.getElementById("url"),
-  usercontainer:document.querySelector(".usercontainer"),
+  usercontainer: document.querySelector(".usercontainer"),
+  picturecontainer: document.querySelector(".picturecontainer"),
+  totalpicture: document.getElementById("totalpicture"),
 };
 
 function inject(music){
@@ -84,6 +86,9 @@ function userinject(album){
       <button class="remove btn">Remove Album</button>
       </div>`
   );
+  DOMSelectors.picturecontainer.insertAdjacentHTML("afterbegin",
+    `<img class="img" src="${album.totalpicture}"/>`
+  );
 }
 
 container.addEventListener("click", function (e) {
@@ -107,6 +112,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
   let album = {};
   album.title = document.getElementById("title").value;
   album.url = document.getElementById("url").value;
+  album.totalpicture = document.getElementById("totalpicture").value;
   userinject(album);
   clearFields();
   document.querySelectorAll(".remove").forEach((button) => {
@@ -150,5 +156,6 @@ function removeAlbum(event) {
 function clearFields() {
   DOMSelectors.title.value = "";
   DOMSelectors.url.value = "";
+  DOMSelectors.totalpicture.value = "";
 }
 
