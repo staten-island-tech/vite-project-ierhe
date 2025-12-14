@@ -18,24 +18,24 @@ const songlist = [
   alt: "placeholder",
   },
   {
-  name: "placeholder",
+  name: "DOPAMINE",
   category: "Rock",
-  creator: "",
-  img: "placeholder",
+  creator: "Kami Kehoe",
+  img: "https://i.scdn.co/image/ab67616d0000b273ec2829eb42cf529d8927ecc5",
   alt: "placeholder",
   },
   {
-  name: "placeholder",
+  name: "Killah",
   category: "Funk",
-  creator: "",
-  img: "placeholder",
+  creator: "Lady Gage feat. Gesaffelstein",
+  img: "https://th.bing.com/th/id/OIP.TTBMv29K4_2gyeGd-dw8AwHaHa?w=108&h=108&c=1&bgcl=271ae4&r=0&o=7&cb=ucfimg1&pid=ImgRC&rm=3&ucfimg=1",
   alt: "placeholder",
   },
   {
-  name: "placeholder",
+  name: "Love Hangover",
   category: "Romance",
-  creator: "",
-  img: "placeholder",
+  creator: "JENNIE & Dominic Fike",
+  img: "https://th.bing.com/th/id/OIP.46t1w4wuuZeU9ay8y1Wy-AHaEK?w=299&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1",
   alt: "placeholder",
   }
 ];
@@ -86,9 +86,6 @@ function userinject(album){
       <button class="remove btn">Remove Album</button>
       </div>`
   );
-  DOMSelectors.picturecontainer.insertAdjacentHTML("afterbegin",
-    `<img class="totalimg" src="${album.totalpicture}"/>`
-  );
 }
 
 container.addEventListener("click", function (e) {
@@ -112,7 +109,6 @@ document.getElementById("form").addEventListener("submit", function (e) {
   let album = {};
   album.title = document.getElementById("title").value;
   album.url = document.getElementById("url").value;
-  album.totalpicture = document.getElementById("totalpicture").value;
   userinject(album);
   clearFields();
   document.querySelectorAll(".remove").forEach((button) => {
@@ -156,9 +152,4 @@ function removeAlbum(event) {
 function clearFields() {
   DOMSelectors.title.value = "";
   DOMSelectors.url.value = "";
-  DOMSelectors.totalpicture.value = "";
-}
-
-function noalbumart() {
-  
 }
